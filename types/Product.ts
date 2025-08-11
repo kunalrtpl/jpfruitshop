@@ -1,9 +1,13 @@
-// types/Product.ts
+export interface Category {
+  id: number;
+  name: string;
+}
+
 export interface Product {
   id: number;
   product_name: string;
-  category: string;
-  auction_date: string; // YYYY-MM-DD
-  start_time: string;   // HH:mm:ss
-  end_time: string;     // HH:mm:ss
+  category: Category; // category should be an object with name
+  final_price: number;
+  short_description?: string;
+  image: string;
 }
