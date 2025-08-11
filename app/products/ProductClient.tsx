@@ -1,11 +1,10 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import { getProducts } from "@/lib/api/products";
 import ProductList from "@/components/ProductTable";
+import { Product } from "@/types/Product";  // <-- import Product type
 
 export default function ProductClient() {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<Product[]>([]);  // <-- type here
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
